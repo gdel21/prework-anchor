@@ -1,0 +1,14 @@
+function removeUrlAnchor(url){
+  let newArr = url.split('');
+  let counter = 0;
+  for(i = 0; i < url.length; i++){
+    if(url[i] === "#"){
+      url = newArr.join('');
+      return url.substr(0, i);
+      counter = 1;
+      i = url.length;
+    }
+  }if(counter === 0){
+    return url;
+  }
+}
